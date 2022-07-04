@@ -4,18 +4,12 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    User.create(params[:user])
+    @user = User.create(params[:user])
     if @user.save
       redirect_to root_path, notice: "Successfully created account"
     else
       render :new
     end
-  end
-
-  def update
-    user = current.account.registrations.find(params[:id])
-    user.update!(user_params)
-    redirect_to user
   end
 
   private
