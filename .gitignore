@@ -42,3 +42,6 @@ yarn-debug.log*
 
 # Vim swap files
 *.sw?
+
+# Not putting in credentials.yml.enc
+config/credentials.yml.enc
