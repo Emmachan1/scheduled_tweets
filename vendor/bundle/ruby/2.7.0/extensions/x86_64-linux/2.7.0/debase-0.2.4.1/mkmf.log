@@ -1,0 +1,127 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-2.7  -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: vm_core.h: No such file or directory
+    3 | #include <vm_core.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/usr/include/ruby-2.7.0/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: vm_core.h: No such file or directory
+    3 | #include <vm_core.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <iseq.h>
+/* end */
+
+--------------------
+
+have_header: checking for version.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <version.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_insnhelper.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_insnhelper.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for method.h... -------------------- yes
+
+"gcc -E -I/usr/include/x86_64-linux-gnu/ruby-2.7.0 -I/usr/include/ruby-2.7.0/ruby/backward -I/usr/include/ruby-2.7.0 -I. -I/home/echan/scheduled_tweets/vendor/bundle/ruby/2.7.0/gems/debase-ruby_core_source-0.10.16/lib/debase/ruby_core_source/ruby-2.7.0-p0 -g -O2 -fdebug-prefix-map=/build/ruby2.7-fvook9/ruby2.7-2.7.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <method.h>
+/* end */
+
+--------------------
+
