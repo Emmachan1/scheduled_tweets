@@ -38,3 +38,7 @@ yarn-debug.log*
 .yarn-integrity
 
 /config/credentials/development.key
+
+
+# Vim swap files
+*.sw?
