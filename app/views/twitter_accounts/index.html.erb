@@ -13,5 +13,8 @@
       <% end %>
       <%= link_to "@#{twitter_account.username}", "http://twitter.com/#{twitter_account.username}", targer: :_blank %>
     </div>
+
+    <%= button_to "Disconnect", twitter_account, method: :delete, data: { confirm: "Are you sure?"} %>
+
   </div>
 <% end %>
