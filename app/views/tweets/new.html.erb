@@ -1,6 +1,8 @@
 <h1>Schedule a Tweet</h1>
 
-<%= form_with model: @tweet do |form| %>
+<%= form_with model: @tweet, method: :post, local: true do |form| %>
+  <%= render "shared/form_errors", form: form %>
+
   <div class="mb-3">
     <%= form.label :twitter_account_id %>
     <%= form.collection_select :twitter_account_id, Current.user.twitter_accounts, :id, :username, {}, { class: "form-control" } %>
@@ -19,6 +21,7 @@
     </div>
   </div>
 
-  <%= form.button "Schedule", class: "btn btn-primary" %>
+  <%#= form.button "Schedule", class: "btn btn-primary" %>
+  <%= button_to "Schedule", "/tweets", class: "btn btn-primary" %>
 
 <% end %>
