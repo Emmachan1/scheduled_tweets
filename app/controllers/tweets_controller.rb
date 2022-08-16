@@ -11,11 +11,11 @@ class TweetsController < ApplicationController
 
   def create 
     @tweet = Tweet.create(tweet_params)
-    
+    @tweet.user = Current.user 
     if @tweet.valid?
       @tweet.save
       session[:tweet_id] = @tweet.id
-      retired_to tweets_path, notice: "Tweet was scheduled successfully"
+      redirect_to tweets_path, notice: "Tweet was scheduled successfully"
     else
       render :new
     end
