@@ -25,13 +25,19 @@ class TweetsController < ApplicationController
   def edit
   end
 
-  def update
+  def update 
     if @tweet.update(tweet_params)
-      redirect_to tweets_path, notice: "Tweet was upadted successfully"
+      session[:tweet_id] = @tweet.id
+      redirect_to tweets_path, notice: "Tweet was updated successfully"
     else
-      render :edit
+      render :new
     end
+
+  def destroy
+    @tweet.destroy(tweet_params)
+    redirect_to tweets_path, notice: "Tweet was unscheduled successfully"
   end
+end
 
   private
 
